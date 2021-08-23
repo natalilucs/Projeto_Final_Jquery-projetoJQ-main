@@ -1,0 +1,361 @@
+
+*{
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+
+header{
+    padding: 0 auto;
+    
+}
+
+body{
+    margin-top: auto;
+    font-family: sans-serif;
+    background-color: #f8f8f8;
+    
+}
+
+main{
+    display: flex;
+}
+
+/* select{
+    border: ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ; 
+
+}*/
+
+input{
+    display:block;
+    margin: 1vh 0;
+}
+
+
+/* 
+button{
+    width: 35%;    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+} */
+
+.pdiferente{
+    color:rgb(3, 28, 80);
+    font-family: tahoma;
+    font-weight: bolder;
+}
+
+#secao0{
+    float: left;
+}
+
+#secao2{
+    width: 100%;
+}
+
+.relogio{
+    float: right;
+}
+
+.box1{
+    
+    padding: 30px 10px;
+    /* margin: 10px auto; */
+    margin-top: 20vh;
+    border: 2px solid rgb(163, 175, 182);
+    border-radius: 20px;
+    background-color: rgba(119, 136, 153, 0.404) ;
+    box-shadow: 2px 5px 4px 5px rgba(44,62,80,0.7);
+    float: left;
+    position: fixed;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+#subirTopo img {
+    width: 5vh;
+    height: 5vh;
+}
+
+#subirTopo{
+    text-decoration: none;
+    background: rgba(45, 48, 48, 0.9);
+    bottom: 30px;
+    right: 30px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: fixed;
+    border: 0;
+    font-family: sans-serif;
+    opacity: .8;
+    display: none;
+
+}
+
+.container-imagens{
+    background-color: rgba(125, 143, 240, 0.075);
+    max-width: 100%;
+
+}
+
+.container-imagens img{
+    display: inline-flex;
+    margin: 10vh 3vh ;       
+    width: 30%;
+    height: 30%;    
+}
+
+/* ------------------ inicio accordions */
+.accordions{
+    width:50%;
+    margin:0 auto;
+    border:1px solid #ccc;
+    margin-top: 20vh;
+}
+.accordion-item input{
+	display:none;
+}
+.accordion-item label{
+    
+    display:block;
+    border:1px solid rgb(245, 243, 243);
+    background:#e5e5e5;
+    cursor:pointer;
+	padding:5px 3px;
+}
+.accordion-content{
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+ }
+[id^=accordion]:checked ~ .accordion-content {
+    height: auto;
+}
+/* fim dos accordion */
+
+
+/* CSS Parte Informação Covid */
+
+h1{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: oblique;
+    font-size: 8vh;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+h2{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: oblique;
+    font-size: 6vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+p{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: initial;
+    font-size: 2.6vh;
+}
+
+
+#pai_div_maos{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
+}
+
+.div_maos{
+    border: 1px solid rgb(56, 55, 55);
+    background-color: #398ab654;
+    border-radius: 1vh;
+    height: auto;
+    width: 25%;
+    text-align: center;
+    margin: 2vh;
+    word-wrap: break-word;
+}
+
+.bloco_maos1, .bloco_maos2{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#pai_div_tossir{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
+}
+
+.div_tossir{
+    border: 1px solid rgb(56, 55, 55);
+    border-radius: 1vh;
+    background-color: #77d09e85;
+    height: auto;
+    width: 30%;
+    text-align: center;
+    margin: 2vh;
+    word-wrap: break-word;
+}
+
+.bloco_tossir1, .bloco_tossir2{
+    display: flex;
+    justify-content: center;
+}
+
+#pai_div_mascara{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
+}
+
+.div_mascara{
+    border: 1px solid rgb(56, 55, 55);
+    background-color: #e2c6228e;
+    border-radius: 1vh;
+    height: auto;
+    width: 33%;
+    text-align: center;
+    margin: 2vh;
+    word-wrap: break-word;
+}
+
+.bloco_mascara1, .bloco_mascara2{
+    display: flex;
+    justify-content: center;
+}
+
+.img_maos{
+    display: flex;
+    justify-content:center;
+    
+}
+
+.img_maos img{
+    width: 14vh;
+    height: 14vh;
+}
+
+.img_tossir{
+    display: flex;
+    justify-content:center;
+}
+
+.img_mascara{
+    display: flex;
+    justify-content: center;
+}
+
+.img_tossir img{
+    width: 14vh;
+    height: 14vh;
+}
+
+.img_mascara img{
+    width: 14vh;
+    height: 14vh;
+}
+
+
+
+input{
+    display:block;
+    margin: 1vh 0;
+}
+
+
+.box1{
+    
+    padding: 30px 10px;
+    margin: 10px auto;
+    margin-top: 20vh;
+    border: 2px solid rgb(163, 175, 182);
+    border-radius: 20px;
+    background-color: rgba(119, 136, 153, 0.404) ;
+    box-shadow: 10%;
+    position: fixed;
+}
+
+/* tratamento informativos */
+
+
+#imagem_tratamento{
+   justify-content: center;
+   display: flex;
+   border-radius: 10px;
+} 
+
+/*******************************estilo slideshow*************************/
+.container{
+    background: lightblue;
+    margin: 100px auto 40px auto;
+    width: 1100px;
+    height: 732px;    
+    overflow: hidden;
+} 
+
+
+#imagembg{
+    width: 1100px;
+    height: 732px;       
+    background-size: cover;
+    transition: 1s;
+}
+
+.anterior, .proximo{
+    position: relative;
+    margin-top: -426px;
+    background-color: rgba(44,62,80, 0.04);
+    width: 65px;
+    height: 120px;
+    background-color: rgba(44,62,80, 0.04);
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 120px;
+    cursor: pointer;
+    
+}
+
+.anterior{
+    float: left;
+}
+
+.proximo{
+    float: right;
+}
+
+.container:hover .anterior{
+    background-color: rgba(44,62,80,0.7);
+}
+
+.container:hover .proximo{
+    background-color: rgba(44,62,80,0.7);
+}
+
+.proximo:hover{
+    background-color: rgba(44,62,80,0.7);
+}
+
+.anterior:hover{
+    background-color: rgba(44,62,80,0.7);
+}

@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/fasesp.css">
+    <link rel="stylesheet" href="./css/footerStyle.css">
+    <script type="text/javascript" src="libs/jquery.js"></script>
+    <script src="js/header-js/header_fasesSp.js"></script>
+    <title>Dados sobre São Paulo COVID-19</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- Definição do menu -->
+        <!-- Cabeçalho para tela em computador -->
+        <div class="cabecalhoDesktop">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fasesp.html">Fases</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="quemSomos.html">Quem somos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton1" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+        <!-- Cabeçalho em tela menores ou celulares -->
+        <div class="cabecalhoSmart">
+            <nav class="menu_smart">
+                <div class="title" onclick="menu_dropdown()">
+                    <img id="menu_dropdown" src="imagens/menu_dropdown.png" alt="">
+                    <div class="arrow"></div>
+                </div>
+
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fasesp.html">Fases</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="quemSomos.html">Quem somos</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton2" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="secao0">
+
+            <!-- <p onload="informeData()">São Paulo,<span id="data"></span></p> -->
+
+
+
+            <div class="box1">
+                <p class="pdiferente">TAXA DE OCUPAÇÃO</p>
+
+                <select name="quantidadeLeitos" id="quantidadeLeitos">
+                    <option class="enfe">Enfermaria</option>
+                    <option class="uti">UTI</option>
+                </select>
+
+                <input type="number" id="input1" placeholder="Quantidade de leitos">
+                <input type="number" id="input2" placeholder="Leitos em uso">
+                <span id="taxaocup"><em>%</em></span>
+                <button id="calcule">Calcular</button>
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- adicional do html da Natali -->
+
+        <section id="secao2">
+            <!-- texto simples sem necessidade de box -->
+            <div class="relogio">
+                <p id="hora-atual"></p>
+            </div>
+
+            <div>
+                <h1>O que fazer para se proteger do Covid-19</h1>
+            </div>
+
+            <div>
+                <p id="primeiro_p">Cuidado simples que ajudam na prevemção do virus. Entenda as principais recomendações
+                    para se cuidar
+                    contra a Covid-19</p>
+            </div>
+
+            <!-- sessão mãos -->
+            <div>
+                <h2>Higienização das mãos.</h2>
+            </div>
+            <div class="img_maos">
+                <img src="imagens/mao-01.png" alt="">
+                <img src="imagens/mao-02.png" alt="">
+                <img src="imagens/mao-03.png" alt="">
+            </div>
+
+            <!-- quadrados -->
+            <div id="pai_div_maos">
+
+                <div class="bloco_maos1">
+                    <div class="div_maos">
+                        <p>Após tossir ou espirrar lave suas mãos</p>
+                    </div>
+
+                    <div class="div_maos">
+                        <p>Antes e depois de comer sempre higienize suas mãos</p>
+                    </div class="div_maos">
+
+                    <div class="div_maos">
+                        <p>Sempre que chegar em casa, lave suas mãos imediatament</p>
+                    </div>
+                </div>
+
+                <div class="bloco_maos2">
+                    <div class="div_maos">
+                        <p>Após ir ao banheiro continue mantendo a higiene de suas mãos</p>
+                    </div>
+
+                    <div class="div_maos">
+                        <p>Sempre que auxiliar no cuidado de pessoas doentes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sessão tossir -->
+
+            <div>
+                <h2>Sempre que você tossir</h2>
+            </div>
+            <div class="img_tossir">
+                <img src="./imagens/tossir-01.png" alt="">
+                <img src="./imagens/tossir-02.png" alt="">
+            </div>
+
+            <!-- quadrados -->
+
+            <div id="pai_div_tossir">
+
+                <div class="bloco_tossir1">
+
+                    <div class="div_tossir">
+                        <p>Cubra sempre sua boca e nariz ao tossir utilizando seu braço para isso</p>
+                    </div>
+
+                    <div class="div_tossir">
+                        <p>Se usar lenço após tossir, jogue o lenço fora e em seguida lave suas mãos</p>
+                    </div>
+                </div>
+
+                <div class="bloco_tossir2">
+                    <div class="div_tossir">
+                        <p>Use, preferencialmente, lenços de papel e descate-lo após utiliza-lo</p>
+                    </div>
+                </div>
+
+                <!-- Sessão máscara -->
+                <div>
+                    <h2>Uso correto das máscaras</h2>
+                </div>
+
+                <!-- quadrados -->
+
+                <div class="img_mascara">
+                    <img src="./imagens/icone-mascara-01.png" alt="">
+                    <img src="./imagens/icone-mascara-02.png" alt="">
+                    <img src="./imagens/icone-mascara-03.png" alt="">
+                </div>
+
+
+                <div id="pai_div_mascara">
+                    <div class="bloco_mascara1">
+                        <div class="div_mascara">
+                            <p>Use no transporte coletivo e espaços comuns (rua, mercados e farmácias)</p>
+                        </div>
+
+                        <div class="div_mascara">
+                            <p>A máscara deve cobrir queixo, nariz e ficar justa ao rosto</p>
+                        </div>
+                    </div>
+
+                    <div class="bloco_mascara2">
+                        <div class="div_mascara">
+                            <p>Higienize as mãos antes e após colocar a peça</p>
+                        </div>
+
+                        <div class="div_mascara">
+                            <p>Uso é obrigatório em todo o estado. Quem estiver sem fica sujeito a multa</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <button id="subirTopo" onclick="voltarTop()">
+            <img src="imagens/up.png" alt="subir" class="subir"> <br> voltar ao topo
+        </button>
+
+    </main>
+
+    <section id="tratamento">
+
+        <div id="informativo_tratamento">
+            <h2>Potenciais técnicas de medicamentos e tratamentos</h2>
+            <p>Desde o surgimento à grande massa da existência da SARS-CoV-2, popularmente conhecida como Coronavirus,
+                estudos e diferentes tratamentos vem sendo notificados regularmente. Defido a popularização "fake news"
+                com relação covid-19, e seu tratamentos, precoces e não recomendados, disponibilizamos abaixo, o link
+                direto para o site do Instituto nacional da Propriedade Industrial, com informações atualizadas
+                diariamente sobre estudos relacionados a Covid-19</p>
+
+            <a href="https://www.gov.br/inpi/pt-br/servicos/patentes/tecnologias-para-covid-19/Medicamentos"
+                target="_blank" id="imagem_tratamento"><img src="./imagens/Covid19_div2_medicamento.png" alt=""></a>
+        </div>
+
+        <div id="tratamentos">
+            <h2></h2>
+
+        </div>
+
+    </section>
+
+    <div>
+        <div class="container">
+            <div id="imagembg"></div>
+            <div class="anterior" onclick="anterior()">&lt;</div>
+            <div class="proximo" onclick="proximo()">&gt;</div>
+
+        </div>
+        <!-- <ul id="botoes"></ul> -->
+    </div>
+
+    <section id="secao1">
+        <div class="accordions" id="menuprincipal">
+            <div class="accordion-item">
+                <input type="radio" name="accordion" checked="checked" id="accordion-1" />
+                <label for="accordion-1" style="background-color: red">Fase Vermelha</label>
+                <div class="accordion-content">
+                    <h2>Setores que podem funcionar durante fase vermelha</h2>
+                    <p>De acordo com o controle efetuado pelo MInistério da saúde, o estado se encontrá em fase vermelha
+                        quando
+                        estiver com tava de ocupação de leitos de UTI acima de 80%</p>
+                    <p>Segue abaixo a lista do que poderá estar em funcionamento conforme normas do Ministério da Saúde
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Hospitais, Consultórios Odontologicos</td>
+                            <td>Estarão funcionando Hospitais, clínicas, farmácias, dentistas e estabelecimentos de
+                                saúde
+                                animal
+                                (veterinários)</td>
+                        </tr>
+                        <tr>
+                            <td>Restaurantes</td>
+                            <td>Os restaurante poderam funcionar em modalidade delivery (take-away) e modalidade
+                                drive-thru
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Postos de Gasolina e Suprimentos</td>
+                            <td>Cadeia de abastecimento e logística, produção agropecuária e agroindústria,
+                                transportadoras,
+                                armazéns, postos de combustíveis e lojas de materiais de construção</td>
+                        </tr>
+                        <tr>
+                            <td>Transporte público</td>
+                            <td>Empresas de locação de veículos, oficinas de veículos, transporte público coletivo,
+                                táxis,
+                                aplicativos de transporte, serviços de entrega e estacionamentos;</td>
+                        </tr>
+                        <tr>
+                            <td>Supermecados</td>
+                            <td>Supermercados, hipermercados, açougues e padarias, lojas de suplemento, feiras livres
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="radio" name="accordion" id="accordion-2" />
+                <label for="accordion-2" style="background-color: orange">Fase Laranja</label>
+                <div class="accordion-content">
+                    <div>
+                        <h2>Setores que podem funcionar durante fase laranja</h2>
+
+                        <p>Na fase laranja, a segunda mais restritiva do Plano São Paulo, os bares não podem funcionar
+                            em nenhum período do dia.
+                            Capacidade de 40% e horário reduzido (8 horas).
+                        </p>
+                        <table>
+                            <tr>
+                                <td>Shopping center</td>
+                                <td>Entrada controlada por funcionários treinados, distanciamento mínimo de 1 metro e
+                                    meio.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Comércio varejista e lojas de conveniência</td>
+                                <td>Não permitido o consumo nas calçadas, e venda de bebidas alcóolicas - após as 6h e
+                                    até as 20h.</td>
+                            </tr>
+                            <tr>
+                                <td>Restaurantes </td>
+                                <td>Distância de no mínimo 2 metros entre as mesas e de 1,5 metros entre pessoas, máximo
+                                    de 6 pessoas por mesa. </td>
+                            </tr>
+                            <tr>
+                                <td>Salões de beleza </td>
+                                <td>Atendimento com agendamento prévio, distanciamento de 1,5 entre pessoas, cliente não
+                                    pode ser atendido por mais de um profissional simultaneamente.</td>
+                            </tr>
+                            <tr>
+                                <td>Academias </td>
+                                <td>Entrada com agendamento prévio, equipamentos devem ser limpos ao menos 3 vezes ao
+                                    dia,
+                                    permissão apenas para aulas e práticas individuais. </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="radio" name="accordion" id="accordion-3" />
+                <label for="accordion-3" style="background-color: yellow">Fase Amarela</label>
+                <div class="accordion-content">
+                    <h2>Setores que podem funcionar durante fase amarela do plano São Paulo</h2>
+                    <p> Com o progresso ao combate a pandemia da Covid-19, a entrada para a fase amarela permitirá a
+                        retomada de alguns setore, como: </p>
+
+                    <table>
+                        <tr>
+                            <td>Bares</td>
+                            <td>Bares que antes na laranja não estavam com seu funcionamento liberado, passam a serem
+                                incluidos
+                                nesta fase. Permissão de máximo de 40% de sua capacidade e horario de máximo 10h diárias
+                                em
+                                aberto</td>
+                        </tr>
+
+                        <tr>
+                            <td>Academias</td>
+                            <td>Academias passam a ser reabertas, com seu funcionamemto de no máximo 10h diárias com
+                                agendamento
+                                previamento feito, e permissão de máximo 40% de sua capacidade</td>
+                        </tr>
+
+                        <tr>
+                            <td>Parquer Públicos</td>
+                            <td>Parques públicos que antes já eram permitidos, podem a partir da entrada na fase
+                                amarela, ter
+                                seu funcionamemto estendido por até 10h diárias, abrindo as 6h e fechando as 22h. Finais
+                                de
+                                semana com restrições das 6h as 18h</td>
+                        </tr>
+                    </table>
+
+
+
+
+                </div>
+            </div>
+            <div class="accordion-item">
+                <input type="radio" name="accordion" id="accordion-4" />
+                <label for="accordion-4" style="background-color: green;">Fase Verde</label>
+                <div class="accordion-content">
+                    <h2>Setores que podem funcionar durante fase verde do plano São Paulo</h2>
+                    <p>Após a classificação na fase verde, atividades culturais, convenções, eventos sociais, de
+                        negócios e
+                        culturais terão autorização adicional de funcionamento da seguinte maneira:</p>
+                    <table>
+                        <tr>
+                            <td>Cinema e Teatros</td>
+                            <td>Cinemas e teatros poderão retornar seu funcionamento com ocupação máxima de 60% e o
+                                público
+                                poderá ficar em pé, desde que com distanciamento verificado por marcações</td>
+                        </tr>
+                        <tr>
+                            <td>Academias</td>
+                            <td>Estarão com seu funcionamento permitido seguindo as normas de seguraça pública de uso de
+                                mascaras e distancimento fisico minimo "1.5m". Agendamento de uso do estabelecimento
+                                para
+                                controle de máximo 60% de sua capacidade</td>
+                        </tr>
+
+                        <tr>
+                            <td>Shopping Center</td>
+                            <td>Shopping Center que já estavam incluidos na fase amarela. Terão seu funcionamento
+                                prolongado
+                                em 2h a mais, sendo permitido o funcionamemto por máximo 10h</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- api ui - Accordion -->
+        </div>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
+
+    </section>
+    <footer>
+        <section id="footerLogo">
+
+            <img src="./imagens/logo_cidadeSP.png" alt="logoMudavel" id="logo">
+        </section>
+        <section class="meio">
+            <p id="copyright"> 2021 &copy; Todos os direitos reservados.</p>
+        </section>
+
+        <section id="logos">
+            <img src="./imagens/facebook.png" alt="facebook" class="redesSociaisLogos">
+            <img src="./imagens/logo_whatsapp.png" alt="whatsapp" class="redesSociaisLogos" id="whatsappLogo">
+            <img src="./imagens/logo_twitter.png" alt="twitter" class="redesSociaisLogos" id="twitterLogo">
+            <img src="./imagens/instagram.png" alt="instagram" class="redesSociaisLogos">
+            <img src="./imagens/linkedin.png" alt="linkedin" class="redesSociaisLogos">
+        </section>
+    </footer>
+
+    <script src="js/fasesp.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>

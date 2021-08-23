@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0px;
+}
+
+.relogio{
+    float: right;
+}
+
+#cader{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+
+}
+
+#cadernetaVacinacao{
+    display: block;
+    width: 50%;
+    
+}
+
+#vaci{
+    display: block;
+    font-family: 'Roboto';
+    
+}
+
+h1{
+    text-align: center;
+    font-family: 'Roboto';
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h3{
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+}
+
+.cadastros{   
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;  
+    padding-top: 40px ;
+    
+}
+
+.cadastros #center{
+    width: 50%; 
+          
+}
+
+#print{  
+    width: 45%;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadastros input[type=text],[type=date], select, textarea, #se-gestante, #comorbidade, #se-comorbi, #comorbs {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+
+#barra_progresso{
+    width: 100%;
+    height: 2vh;        
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 5px;
+    
+}
+
+#barra_progresso div{
+    width: 9.09%;
+    height: 100%;
+    
+}
+
+#p1{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+#p11{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+.cadastros button {
+    background-color: rgba(50 195 249);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    
+}
+
+@media (max-width:860px){
+    .banner_topo_cadastro {   
+        background-size: cover;       
+    } 
+    .cadastros #center{
+        width: 60%;       
+    } 
+    
+}
+
+@media (max-width:700px){  
+    .cadastros #center{
+        width: 70%;       
+    }    
+}
+
+@media (max-width:650px){  
+    .cadastros #center{
+        width: 80%;       
+    } 
+    #print{  
+        width: 60%;      
+    }    
+}

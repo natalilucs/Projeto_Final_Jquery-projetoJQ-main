@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footerStyle.css">
+    <script src="./js/header-js/header_index.js"></script>
+    <script src="js/galeriaScript.js"></script>
+    <script src="./libs/jquery.js"></script>
+    <title>São Paulo - Vacinação</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Definição do menu -->
+        <!-- Cabeçalho para tela em computador -->
+        <div class="cabecalhoDesktop">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fasesp.html">Fases</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="quemSomos.html">Quem somos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton1" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+        <!-- Cabeçalho em tela menores ou celulares -->
+        <div class="cabecalhoSmart">
+            <nav class="menu_smart">
+                <div class="title" onclick="menu_dropdown()">
+                    <img id="menu_dropdown" src="imagens/menu_dropdown.png" alt="">
+                    <div class="arrow"></div>
+                </div>
+
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fasesp.html">Fases</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="quemSomos.html">Quem somos</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton2" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="relogio">
+        <p id="hora-atual"></p>
+    </div>
+
+    <section id="primeiro">
+        <div class="bloco" id="bloco1">
+            <img src="./imagens/si_vacina.jpg" alt="">
+            <h2>Confira as vacinas aprovadas</h2>
+            <button id="botao1"><a href="https://www.gov.br/anvisa/pt-br/assuntos/paf/coronavirus/vacinas"
+                    target="blank"><p>Saiba mais</p></a></button>
+        </div>
+
+        <div class="bloco" id="bloco2">
+            <img src="./imagens/10117_8F89E3B8FA9246D9.jpg" alt="">
+            <h2>Confira o protocolo de combate contra a COVID-19</h2>
+            <button id="botao2"><a href=""><p>Saiba mais</p></a></button>
+        </div>
+    </section>
+
+    <section id="segundo">
+        <img src="./imagens/pfizer_banner_v2.jpg" alt="">
+    </section>
+
+    <section id="terceiro">
+
+        <div id="noticia1">
+            <h2 class="h_noticias">Média móvel de mortes por Covid no Brasil</h2>
+
+            <p id="p_noticias1">País contabiliza 571.703 óbitos e 20.458.221 casos de coronavírus, segundo balanço do
+                consórcio de veículos de imprensa com dados das secretarias de Saúde. Veja mais</p>
+            <a href="https://g1.globo.com/bemestar/coronavirus/noticia/2021/08/18/media-movel-de-mortes-por-covid-no-brasil-chega-a-813-e-completa-uma-semana-em-estabilidade.ghtml"
+                target="_blank"><img src="./imagens/vacina2.png" alt="" id="img_noticia1"></a>
+
+        </div>
+
+        <div id="noticia2">
+            <h2 class="h_noticias">Saiba mais sobre o mapa de vacinação no Brasil</h2>
+
+            <p id="p_noticias2">A vacinação no Brasil vem aumentando em grande escala. Verifique o mapa atualiazado
+                conforme seu estado</p>
+            <a href="https://especiais.g1.globo.com/bemestar/vacina/2021/mapa-brasil-vacina-covid/?_ga=2.45770337.47297607.1629403133-f024c284-3af3-5b3e-eed3-3ae435e36af6"
+                target="_blank"><img src="./imagens/1629663703355.png" alt="" id="img_noticia2"></a>
+        </div>
+
+        <div id="noticia3">
+            <h2 class="h_noticias">A ciência no avanço de tratamentos</h2>
+
+            <p id="p_noticias3">Cientistas estudam estímulos elétricos para tratar Covid grave</p>
+            <a href="https://g1.globo.com/bemestar/coronavirus/noticia/2021/08/19/cientistas-estudam-estimulos-eletricos-para-tratar-covid-grave.ghtml"
+                target="_blank"><img src="./imagens/1629663420661.png" alt="" id="img_noticia3"></a>
+        </div>
+
+    </section>
+
+    <footer>
+        <section id="footerLogo">
+
+            <img src="./imagens/logo_cidadeSP.png" alt="logoMudavel" id="logo">
+        </section>
+        <section class="meio">
+            <p id="copyright"> 2021 &copy; Todos os direitos reservados.</p>
+        </section>
+
+        <section id="logos">
+            <a href="https://www.facebook.com/SoulCodeAcademy/" target="blank"><img src="./imagens/facebook.png" alt="facebook" class="redesSociaisLogos"></a>
+            <a href=""><img src="./imagens/logo_whatsapp.png" alt="whatsapp" class="redesSociaisLogos" id="whatsappLogo"></a>
+            <a href="https://twitter.com/SoulCodeAcademy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"><img src="./imagens/logo_twitter.png" alt="twitter" class="redesSociaisLogos" id="twitterLogo"></a>
+            <a href="https://www.instagram.com/soulcodeacademy/" target="blank"><img src="./imagens/instagram.png" alt="instagram" class="redesSociaisLogos"></a>
+            <a href="https://www.linkedin.com/company/soulcodeacademy/mycompany/" target="blank"><img src="./imagens/linkedin.png" alt="linkedin" class="redesSociaisLogos"></a>
+        </section>
+    </footer>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>

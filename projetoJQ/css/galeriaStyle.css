@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
+}
+
+.relogio{
+    float: right;
+}
+
+main{ 
+    display: grid;
+}
+#titulo{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+#tituloGaleria{
+    text-align: center;
+    font-size: 13vh;
+    margin-top: 6vh;
+    width: 100%;
+    height: 30vh;   
+}
+#subtituloGaleria{
+    text-align: center;
+    font-size: 8vh;
+    width: 100%;
+    height: 20vh;
+}
+#imagemETexto{
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+#imagemDeVacinacao{
+   padding: 4vh;
+   padding-left: 10vh;
+}
+#imagemVac{
+    width: 50vh;
+    height: 40vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+}
+#textoDaImagem1{
+    width: 80%;
+    height: 35vh;
+    margin: 8vh;
+    padding: 10vh;
+    background-color: #D0D3D9;
+    box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -webkit-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -moz-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    overflow: auto;
+}
+#imagensDeFamosos{
+    width: 100%;
+    height: 60vh;
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#imgGreen1{
+    width: 55vh;
+    height: 40vh;
+    margin-left: 10vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+}
+#imgGreen2{
+    width: 40vh;
+    height: 40vh;
+    margin-left: 16vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+}
+#imgGreen3{
+    width: 50vh;
+    height: 40vh;
+    margin-left: 10vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+}
+#BotaoMostrarMais{
+    text-align: center;
+    height: 10vh
+}
+#linkParaVacina{
+    height: 30vh;
+    margin-left: 98vh;
+
+}
+#imagemVacinacao{
+    width: 20vh;
+    height: 20vh;
+    margin-top: 10vh;
+}
+#vacineJa{
+    height: 20vh;
+    text-align: center;
+    text-decoration: none;
+}
+#vacinaJaTexto{
+    color: black;
+    font-size: 10vh;
+}
+#vacinaJaTexto:hover {
+    opacity: 0.8;
+}
+#mostrarMais{
+   width: 20vh;
+   height: 8vh;
+   font-size: 3vh;
+   background-color: rgb(94, 216, 94);
+   color: white;
+   font-weight: bold;
+   border-radius: 20px;
+   border-style: none;
+
+}
+#maisImagensDeFamosos{
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#imgYellow1{
+    width: 55vh;
+    height: 35vh;
+    margin-left: 10vh;
+    margin-top: 20vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+}
+
+#imgYellow2{
+    width: 55vh;
+    height: 35vh;
+    margin-top: 20vh;
+    margin-left: 10vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+
+}
+
+#imgYellow3{
+    width: 45vh;
+    height: 45vh;
+    margin-top: 10vh;
+    margin-left: 12vh;
+    box-shadow: 10px 11px 0px -1px rgba(179,179,179,0.75);
+}
+
+#logo{
+    width: 40vh;
+    height: 20vh;
+}
+.meio {
+    display: flex;
+    margin-right: 5vh;
+
+}
+#copyright {
+    font-size: 3.5vh;
+    font-style: italic;
+    margin-top: 14vh;
+}
+.redesSociaisLogos {
+    margin-left: 1vh;
+    margin-right: 2vh;
+    width: 7vh;
+    height: 7.2vh;
+    max-height: 19vh;
+}
+.redesSociaisLogos:hover {
+    opacity: 0.6;
+}
+#logos {
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+}
+#whatsappLogo{
+    width: 8vh;
+    height: 8.5vh;
+}
+#twitterLogo{
+    width: 9vh;
+    height: 9.5vh;
+}

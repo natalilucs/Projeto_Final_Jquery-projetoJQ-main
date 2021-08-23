@@ -1,0 +1,261 @@
+/* Definição do grid do cabeçalho e estilização geral */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+header {
+    width: 100%;
+    font-family: 'Roboto';
+}
+
+header a {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+header li {
+    list-style: none;
+}
+
+/* Definição dos nomes das grids do header */
+
+.menu {
+    grid-area: menu_;
+}
+
+.menu_smart {
+    grid-area: menu_smart
+}
+
+.logo {
+    grid-area: logo;
+    height: 14vh;
+}
+
+.cadastro {
+    grid-area: cadastro;
+}
+
+.acessibilidade {
+    grid-area: acessibilidade;
+}
+
+.pesquisa {
+    grid-area: pesquisa;
+}
+
+.cabecalhoSmart {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    /* Deixar o cabeçalho para telas menores desligado */
+
+    /* Definição dos grids da tela desktop */
+    .cabecalhoDesktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+         "logo logo menu_ menu_ cadastro acessibilidade" 
+         "logo logo menu_ menu_ cadastro pesquisa";
+        background-color: #22d8b1 ;
+    }
+    /* Estilização do menu*/
+    .menu {
+        margin: auto 0;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menu ul li {
+        text-transform: uppercase;
+        padding: 1vh;
+        background-color: #1a1a1a ;
+        border: solid 1px rgb(26, 197, 134);
+        border-radius: 10px;
+    }
+
+    .menu li :hover {
+        background-color: #2e2e2e ;
+    }
+    .menu a {
+        font-size: large;
+    }
+    /* Estilização da logo */
+    .logo img {
+        height: 100%;
+        width: 70%;
+        margin-left: 10%;
+    }
+    /* Estilização do botão de cadastro da vacinação */
+    .cadastro {
+        margin-left: 2.5vw;
+        word-wrap: break-word;
+    }
+    .cadastro button {
+        height: 100%;
+        width: 10vw;
+        border: solid 2px #0f0f0f;
+        font-size: large;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #fb4a0f;
+    }
+    /* Estilização dos botões de acessibilidade e modo escuro */
+    .acessibilidade img {
+        width: 25px;
+        height: 25px;
+    }
+    .acessibilidade {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .pesquisa {
+        display: flex;
+        align-items: center;
+    }
+    .pesquisa input {
+        background-color: #e1e1e1;
+        font-size: medium;
+        width: 80%;
+        height: 4vh;
+        margin-right: 1vw;
+        /* margin-left: 1vw; */
+        border: solid 2px #4e614d;
+    }
+    .pesquisa img {
+        height: 4vh;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .cabecalhoDesktop {
+        display: none;
+    }
+
+      /* Definição dos grids da tela desktop */
+      .cabecalhoSmart {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+         "menu_smart logo logo cadastro acessibilidade acessibilidade" 
+         "menu_smart logo logo cadastro pesquisa pesquisa";
+        background-color: #22d8b1 ;
+    }
+
+    /* Estilização do menu*/
+    .menu_smart {
+        margin: auto 1vw;
+        width: 6vw;
+    }
+
+    .menu_smart ul li {
+        text-decoration: none;
+        padding:15px 14px;
+        margin:0;
+        transition:all .1s;
+        list-style: none;
+        width: 11vw;
+        background-color: #393939;
+
+    }
+
+    .menu_smart li:hover{
+        background:rgba(246, 171, 27, 1);
+        color: #000;
+        box-shadow:0 0 30px -10px #000;
+        width: 11vw;
+    }
+
+    .menu_smart a {
+        font-size: medium;
+        text-decoration: none;
+        color:#e1e1e1 ;
+    }
+
+    .menu_smart .dropdown{
+        background:rgb(126, 24, 24);
+        border-radius:4px;
+        box-shadow:0 0 40px -10px #000;
+        color:#000000;
+        margin-top:5px;
+        max-height:0;
+        overflow:hidden;
+        transition:all .5s
+    }
+    
+    .menu_smart #menu_dropdown{
+        width: 5vw;    
+    }
+    
+    .arrow{
+        border-left:10px solid transparent;
+        border-right:10px solid transparent;
+        border-bottom:10px solid #fff;
+        position:absolute;
+        right:20px;
+        bottom:-24px;
+        display:none
+    }
+    
+    .menu_smart .arrow.gone{
+        display:block
+    }
+
+    .title{
+        width: 6vw;
+    }
+
+    /* Estilização da logo */
+    .logo img {
+        height: 100%;
+        width: 60%;
+    }
+
+    /* Estilização do botão de cadastro da vacinação */
+    .cadastro {
+        word-wrap: break-word;
+    }
+    .cadastro button {
+        height: 100%;
+        width: 15vw;
+        border: solid 2px #0f0f0f;
+        font-size: small;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #fb4a0f;
+    }
+
+    /* Estilização dos botões de acessibilidade e modo escuro */
+    .acessibilidade img {
+        width: 20px;
+        height: 20px;
+
+    }
+    .acessibilidade {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .pesquisa {
+        display: flex;
+        align-items: center;
+    }
+    .pesquisa input {
+        background-color: #e1e1e1;
+        font-size: medium;
+        width: 80%;
+        height: 70%;
+        margin-right: 0.5vw;
+        margin-left: 0.5vw;
+        border: solid 2px #4e614d;
+    }
+    .pesquisa img {
+        height: 4vh;
+    }
+}

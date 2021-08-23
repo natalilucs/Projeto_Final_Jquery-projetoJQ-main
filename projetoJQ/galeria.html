@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/galeriaStyle.css">
+    <link rel="stylesheet" href="css/footerStyle.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="./js/header-js/header_galeria.js"></script>
+    <script src="js/galeriaScript.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script>
+
+        //Os Elementos dentro da id maisImagensDeFamosos, já estão ocultas
+        $(document).ready(function () {
+        $("#maisImagensDeFamosos").hide(); 
+        
+        //Ao clicar no botão mostrarMais eles exibem os elementos do maisImagensDeFamosos
+        $("#mostrarMais").click(function(){
+        $("#maisImagensDeFamosos").show(10);
+        });
+
+        //Ao dar Dobble Click no botão, eles Voltão a ficar Ocultos;
+        $("#mostrarMais").dblclick(function(){
+        $("#maisImagensDeFamosos").hide(10);
+        });
+
+        });
+    </script>
+    <title>Campanha</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Definição do menu -->
+        <!-- Cabeçalho para tela em computador -->
+        <div class="cabecalhoDesktop">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fasesp.html">Fases</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="quemSomos.html">Quem somos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton1" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+        <!-- Cabeçalho em tela menores ou celulares -->
+        <div class="cabecalhoSmart">
+            <nav class="menu_smart">
+                <div class="title" onclick="menu_dropdown()">
+                    <img id="menu_dropdown" src="imagens/menu_dropdown.png" alt="">
+                    <div class="arrow"></div>
+                </div>
+
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fasesp.html">Fases</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="quemSomos.html">Quem somos</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton2" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="relogio">
+        <p id="hora-atual"></p>
+    </div>
+
+    <main>
+    <section id="titulos">
+        <h1 id="tituloGaleria">Galeria</h1>
+        <h2 id="subtituloGaleria">Campanha de Vacinação</h2>
+    </section>
+
+    <section id="imagemETexto">
+        <section id="imagemDeVacinacao">
+            <section>
+                <img src="https://veja.abril.com.br/wp-content/uploads/2021/01/ian-mckellen.jpg" 
+                alt="" id="imagemVac">
+            </section>
+        </section>
+
+        <section id="textoDaImagem">
+            <section id="textoDaImagem1">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus neque illum animi dolorum magni debitis quos doloremque deserunt excepturi qui iusto nisi fugit obcaecati, possimus quaerat? Dolor debitis unde, voluptas ipsa obcaecati expedita minus asperiores, vitae quo similique repellendus quod assumenda odio, quidem odit tenetur laudantium culpa cupiditate dignissimos in!
+                </p>
+            </section>
+        </section>
+    </section>
+
+    <section id="imagensDeFamosos">
+        <section>
+            <img src="https://f.i.uol.com.br/fotografia/2021/02/12/16131679126026fd2851113_1613167912_3x2_md.jpg" 
+            alt="" id="imgGreen1">
+        </section>
+        <section>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqQUI5WbPDorYKlxkL48W2fuEb42iGvYw8g&usqp=CAU" 
+            alt="" id="imgGreen2">
+        </section>
+        <section>
+            <img src="https://i.uai.com.br/ldvxTv7RI__gVpZzPTNeGbZ7mTI=/750x0/imgsapp2.uai.com.br/app/noticia_133890394703/2021/03/27/270295/20210327135643830765e.png" 
+            alt="" id="imgGreen3">
+        </section>
+    </section>
+
+    <section id="maisImagensDeFamosos">
+        <section id="primeiraImagem">
+            <img src="https://s2.glbimg.com/3JhzODg9vvpQQat2ptd0S8C5Nkw=/e.glbimg.com/og/ed/f/original/2021/05/25/20210525165502_img_1650.jpg" 
+            alt="" id="imgYellow1">
+        </section>
+
+        <section id="segundaImagem">
+            <img src="https://cdn.folhape.com.br/upload/dn_arquivo/2021/07/212052175-975418019884704-3478518457092563126-n-2.jpg" 
+            alt="" id="imgYellow2">
+        </section>
+
+        <section id="terceiraImagem">
+            <img src="https://img.estadao.com.br/thumbs/640/resources/jpg/1/0/1615467527001.jpg" 
+            alt="" id="imgYellow3">
+        </section>
+    </section>
+    </main>
+        
+    <section id="BotaoMostrarMais">
+        <button id="mostrarMais">Mostrar mais</button>
+    </section>
+
+    <section id="linkParaVacina">
+        <img src="imagens/vacina2.png" 
+        alt="" id="imagemVacinacao">
+    </section>
+
+    <a id="vacineJa" href="https://www.vacinaja.sp.gov.br/">
+        <h2 id="vacinaJaTexto">Vacine Já!</h2>
+    </a>
+
+    <footer>
+        <section id="footerLogo">
+
+            <img src="./imagens/logo_cidadeSP.png" alt="logoMudavel" id="logo">
+        </section>
+        <section class="meio">
+            <p id="copyright"> 2021 &copy; Todos os direitos reservados.</p>
+        </section>
+
+        <section id="logos">
+            <img src="./imagens/facebook.png" alt="facebook" class="redesSociaisLogos">
+            <img src="./imagens/logo_whatsapp.png" alt="whatsapp" class="redesSociaisLogos" id="whatsappLogo">
+            <img src="./imagens/logo_twitter.png" alt="twitter" class="redesSociaisLogos" id="twitterLogo">
+            <img src="./imagens/instagram.png" alt="instagram" class="redesSociaisLogos">
+            <img src="./imagens/linkedin.png" alt="linkedin" class="redesSociaisLogos">
+        </section>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>

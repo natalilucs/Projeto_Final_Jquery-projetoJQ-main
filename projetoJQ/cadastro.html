@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https:/resources/demos/style.css">
+    <link rel="stylesheet" href="./css/cadastro_estilo.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link rel="stylesheet" href="./css/footerStyle.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/cadastro.js"></script>
+    <script src="./js/header-js/header_cadastro.js"></script>
+
+    <script>
+        $(function () {
+            var availableTags = [
+
+                "Profissional do Sistema Único de Assistência Social (Suas)",
+                "Trabalhadores da educação do ensino básico em exercício nos ambientes escolares;",
+                "Coveiros, atendentes e agentes funerários;",
+                "Profissional que trabalha em farmácias;",
+                "Oficiais de justiça;",
+                "Profissional de limpeza pública;",
+                "Empregados domésticos;",
+                "Taxistas, mototaxistas, motoristas de aplicativos;",
+                "Trabalhadores do transporte coletivo urbano;",
+                "Bancários;",
+                "Entregadores de aplicativos.",
+                "Outros"
+
+            ];
+            $("#profissao").autocomplete({
+                source: availableTags
+            });
+        });
+
+
+    </script>
+
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+    <header>
+        <!-- Definição do menu -->
+        <!-- Cabeçalho para tela em computador -->
+        <div class="cabecalhoDesktop">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fasesp.html">Fases</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="quemSomos.html">Quem somos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton1" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+        <!-- Cabeçalho em tela menores ou celulares -->
+        <div class="cabecalhoSmart">
+            <nav class="menu_smart">
+                <div class="title" onclick="menu_dropdown()">
+                    <img id="menu_dropdown" src="imagens/menu_dropdown.png" alt="">
+                    <div class="arrow"></div>
+                </div>
+
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fasesp.html">Fases</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="quemSomos.html">Quem somos</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Definição da logo -->
+            <div class="logo">
+                <img src="./imagens/logo_cidadeSP.png" alt="logo">
+            </div>
+
+            <!-- Botão cadastro -->
+            <div class="cadastro">
+                <button><a href="cadastro.html">Agendar vacinação</a></button>
+            </div>
+
+            <div class="acessibilidade">
+                <img src="imagens/icon_font_more.png" alt="aumentarFonte" onclick="aumentarFonte()">
+                <img src="imagens/icon_font_less.png" alt="diminuirFonte"  onclick="diminuirFonte()">
+                <img id="nightbutton2" src="imagens/icon_sun.png" alt="alterarCor" onclick="alteraCor()">
+            </div>
+
+            <div class="pesquisa">
+                <input type="search" name="barraPesquisa" id="pesquisar" placeholder="Pesquisar">
+                <label for="barraPesquisa"></label>
+                <a href="#"><img src="imagens/pesquisar.png" alt="pesquisar"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="relogio">
+        <p id="hora-atual"></p>
+    </div>
+
+    <h1>Cadastro</h1>
+    <section id="cader">
+        <section id="cadernetaVacinacao">
+            <h3> Quais vacinas você possui ?</h3>
+
+            <form id="vaci">
+                <label><b>Bebês e crianças</b></label><br><br>
+
+
+                <input type="checkbox" id="bcgid" name="vacina_tomada" value="BCG-ID"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="BCG-ID">BCG-ID</label><br><br>
+
+
+                <input type="checkbox" id="hepatiteb" name="vacina_tomada" value="Hepatite B"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="HepatiteB">Hepatite B</label><br><br>
+
+
+                <input type="checkbox" id="pentavalente" name="pentavalente" value="Pentavalente"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="">Pentavalente (DTP+Hib+Hep. B)</label><br><br>
+
+
+
+                <input type="checkbox" id="poliomielite" name="vacina_tomada" value="Poliomielite"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Poliomielite">Vacina Poliomielite Inativada</label><br><br>
+
+
+                <input type="checkbox" id="pneumocócica" name="vacina_tomada" value="Pneumocócica"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Pneumocócica">Pneumocócica 10-valente (conjugada)</label><br><br>
+
+
+                <input type="checkbox" id="rotavírus" name="vacina_tomada" value="Rotavírus"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Rotavírus">Vacina Oral Rotavírus Humano</label><br><br>
+
+
+                <input type="checkbox" id="febreamarela" name="vacina_tomada" value="Febre Amarela"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Febre Amarela">Vacina contra Febre Amarela</label><br><br>
+
+
+                <input type="checkbox" id="tetraviral" name="vacina_tomada" value="Tetraviral"
+                    class="selecionaRecem selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Tríplice">Tríplice Viral</label><br>
+                <br>
+
+                <label><b>Jovens e Adultos (de 11 a 59 anos)</b></label>
+                <!-- <input type="checkbox" value="Jovens" name="Jovens" id="jovens"> -->
+                <br /><br>
+
+                <input type="checkbox" id="papilomavírus" name="vacina_tomada" value="Papilomavírus"
+                    class="selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Papilomavírus">Vacina Papilomavírus Humano (HPV)*</label><br><br>
+
+
+                <input type="checkbox" id="febreamarela2" name="vacina_tomada" value="Febre amarela"
+                    class="selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Febre amarela">Vacina febre amarela (atenuada)</label><br><br>
+
+
+                <input type="checkbox" id="tríplice" name="vacina_tomada" value="Tríplice"
+                    class="selecionaJovens selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Tríplice">Tríplice Viral</label><br><br>
+
+
+                <input type="checkbox" id="vacinadt" name="vacina_tomada" value="Vacina dT"
+                    class="selecionaAdultos selecionaIdosos selecionaTodas">
+                <label for="Vacina dT">Vacina dT</label>
+                <br><br>
+
+                <label><b>Idosos (acima de 60 anos)</b></label>
+                <!-- <input type="checkbox" value="Idosos" name="Idosos" id="idosos"> -->
+                <br><br>
+
+                <input type="checkbox" id="pneumocócica" name="vacina_tomada" value="Pneumocócica"
+                    class="selecionaIdosos selecionaTodas">
+                <label for="">Vacina pneumocócica 23-valente (polissacarídica)</label><br><br>
+
+
+                <input type="checkbox" id="influenza" name="vacina_tomada" value="influenza"
+                    class="selecionaIdosos selecionaTodas">
+                <label for="influenza">Vacina influenza (fracionada, inativada)</label><br><br>
+
+
+
+                <input type="checkbox" value="todas_as_vacinas" name="todas_as_vacinas" id="todas_as_vacinas">
+                <label>Selecione todas</label>
+            </form>
+        </section>
+    </section>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#idosos").click(function () {
+                $(".selecionaIdosos").prop('checked', $(this).prop('checked'));
+            });
+        });
+
+        $(document).ready(function () {
+            $("#recem_nascido").click(function () {
+                $(".selecionaRecem").prop('checked', $(this).prop('checked'));
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#todas_as_vacinas").click(function () {
+                $(".selecionaTodas").prop('checked', $(this).prop('checked'));
+            });
+        });
+
+
+        $(document).ready(function () {
+            $("#adultos").click(function () {
+                $(".selecionaAdultos").prop('checked', $(this).prop('checked'));
+            });
+        });
+
+
+
+        $(document).bind(function () {
+            $("#recem_nascido").click().show(".recemnascido");
+        });
+
+
+
+    </script>
+
+    <main>
+        <section class="cadastros">
+            <section id="center">
+                <br>
+                <form id="formulario">
+                    <input id="nome" type="text" placeholder="Nome" onblur="valida_nome(this)"><br>
+                    <input id="cpf" type="text" placeholder="CPF" maxlength="14" onkeydown="fMasc( this, mCPF )"
+                        onblur="valida_cpf(this)"><br>
+                    <input id="data_nascimento" type="date" placeholder="Data de nascimento"
+                        onblur="valida_idade(this)"><br>
+                    <input id="email" type="text" placeholder="E-mail" onblur="valida_email(this)"><br>
+                    <input id="sus" type="text" maxlength="18" onkeydown="fMasc( this, mSUS )"
+                        placeholder="Numero do Cartão do SUS" onblur="valida_sus(this)"><br>
+                    <input id="profissao" type="text" placeholder="Profissão" onblur="valida_profissao(this)"><br>
+
+                    <select name="etnia" id="etnia" onblur="valida_etnia(this)">
+                        <option value="">Selecione a etnia</option>
+                        <option value="preta">Preta</option>
+                        <option value="branca">Branca</option>
+                        <option value="amarela">Amarela</option>
+                        <option value="parda">Parda</option>
+                        <option value="indigena">Indigena</option>
+                        <option value="nao informado">Não Informado</option>
+                    </select><br>
+
+                    <select name="sexo" id="sexo" onclick="valida_sexo(this)">
+                        <option value="">Selecione o sexo</option>
+                        <option value="do sexo masculino">Masculino</option>
+                        <option id="femi" value="do sexo feminino">Feminino</option>
+                        <option value="não binária">Outros</option>
+                    </select><br>
+
+                    <div id="se-gestante">
+                        <label for="">Gestante ?</label><br>
+                        <input id="gestante" type="radio" name="se_gestante" value="gestante">
+                        <label for="gestante">Sim</label><br>
+                        <input id="nao_gestante" checked type="radio" name="se_gestante" value="nao_gestante">
+                        <label for="nao_gestante">Não</label><br>
+                    </div>
+
+                    <select id="comorbs" onclick="valida_comorbidade(this)">
+                        <option value="">Tem comorbidades ?</option>
+                        <option id="comorbs_sim" value="sim">Sim</option>
+                        <option id="comorbs_nao" value="nao">Não</option>
+                    </select>
+
+                    <div id="se-comorbi">
+                        <input class="comor" type="checkbox" value="diabete" onclick="undisable(this)">
+                        <label for="comorbi1">Diabete</label><br>
+                        <input class="comor" type="checkbox" id="pneumopatias" value="pneumopatias"
+                            onclick="undisable(this)">
+                        <label for="comorbi2">Pneumopatias crônicas</label><br>
+                        <input class="comor" type="checkbox" id="hipertensao" value="hipertensão"
+                            onclick="undisable(this)">
+                        <label for="comorbi3">Hipertensão</label><br>
+                        <input class="comor" type="checkbox" id="sindrome" value="sindrome" onclick="undisable(this)">
+                        <label for="comorbi4">Sindrome de down</label><br>
+                        <input class="comor" type="checkbox" id="valvopatias" value="valvopatias"
+                            onclick="undisable(this)">
+                        <label for="comorbi5">Valvopatias</label><br>
+                        <input class="comor" type="checkbox" id="doencas_cerebrovascular"
+                            value="doenças cerebrovascular" onclick="undisable(this)">
+                        <label for="comorbi6">Doenças cerebrovascular</label><br>
+                        <input class="comor" type="checkbox" id="doenca_renal" value="doença renal crônica"
+                            onclick="undisable(this)">
+                        <label for="comorbi7">Doença renal crônica</label><br>
+                        <input class="comor" type="checkbox" id="insuficiencia_cardiaca" value="insuficiencia cardiaca"
+                            onclick="undisable(this)">
+                        <label for="comorbi8">Insuficiência cardíaca</label><br>
+                        <input class="comor" type="checkbox" id="cardiopatia_hipertensiva"
+                            value="cardiopatia hipertensiva" onclick="undisable(this)">
+                        <label for="comorbi9">Cardiopatia hipertensiva</label><br>
+                        <input id="bloque" type="checkbox" checked disabled value="outras" onclick="undisable(this)">
+                        <label for="comorbi10">Outras</label>
+                    </div>
+
+
+                    <input id="peso" type="text" placeholder="Informe o Peso" onblur="valida_peso(this)"><br>
+                    <input id="altura" type="text" placeholder="Informe a Altura" onkeydown="fMasc( this, mALTURA )"
+                        onblur="valida_altura(this)">
+
+                    <div id="barra_progresso">
+                        <div id="p1"></div>
+                        <div id="p2"></div>
+                        <div id="p3"></div>
+                        <div id="p4"></div>
+                        <div id="p5"></div>
+                        <div id="p6"></div>
+                        <div id="p7"></div>
+                        <div id="p8"></div>
+                        <div id="p9"></div>
+                        <div id="p10"></div>
+                        <div id="p11"></div>
+                    </div>
+                    <button type="button" onclick="enviar_dados()">Enviar</button>
+                </form>
+
+            </section>
+
+        </section>
+
+        <section id="print">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="footerLogo">
+
+            <img src="./imagens/logo_cidadeSP.png" alt="logoMudavel" id="logo">
+        </section>
+        <section class="meio">
+            <p id="copyright"> 2021 &copy; Todos os direitos reservados.</p>
+        </section>
+
+        <section id="logos"> 
+        <img src="./imagens/facebook.png" alt="facebook" class="redesSociaisLogos">
+        <img src="./imagens/logo_whatsapp.png" alt="whatsapp"  class="redesSociaisLogos" id="whatsappLogo">
+        <img src="./imagens/logo_twitter.png" alt="twitter" class="redesSociaisLogos" id="twitterLogo">
+        <img src="./imagens/instagram.png" alt="instagram" class="redesSociaisLogos">
+        <img src="./imagens/linkedin.png" alt="linkedin" class="redesSociaisLogos">
+        </section>
+    </footer>
+
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>

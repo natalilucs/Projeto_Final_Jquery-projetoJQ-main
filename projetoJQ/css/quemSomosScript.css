@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.relogio{
+    float: right;
+}
+
+p{
+    font-size: 3vh;
+}
+
+#quemSomos{
+    margin: 0 auto;
+    margin-top: 10vh;
+    width: 70%;  
+    
+}
+
+#QuemSomos{
+    font-size: 13vh;
+    text-align: center;
+}
+
+#texto{
+    background-color: #D0D3D9;
+    box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -webkit-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -moz-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    margin: 0 auto;
+    margin-top: 15vh;
+    padding: 10vh;
+    text-align: justify;
+    width: 80%;
+    height: 40vh;  
+    overflow: auto;
+}
+#primeiro{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20vh;
+    justify-content: space-between;    
+}
+
+.bloco{
+    background: #FBF37C;
+    box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -webkit-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -moz-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    margin: 0 auto;
+    margin-top: 30vh;
+    padding: 5vh;
+    width: 40%;
+    height: 50vh;
+    overflow: auto;   
+}
+.titulosDosBlocos{
+    font-size: 5vh;
+    margin-bottom: 8vh;
+    text-align: center;
+}
+#bloco1{
+    text-align: justify;
+}
+#bloco2{
+    text-align: justify;
+}
+#tituloFundadores{
+    text-align: center;
+    font-size: 10vh;
+    margin-bottom: 10vh;
+}
+#segundo{
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#imgFundador1{
+    width: 30vh;
+    height: 30vh;
+    margin-left: 35vh;
+    border-radius: 60vh 60vh 60vh 60vh;
+    
+}
+#imgFundador2{
+    width: 30vh;
+    height: 30vh;
+    margin-left: 22vh;
+    border-radius: 60vh 60vh 60vh 60vh;
+    
+}
+#imgFundador3{
+    width: 30vh;
+    height: 30vh;
+    margin-left: 10vh;
+    border-radius: 60vh 60vh 60vh 60vh;
+    
+}
+#terceiro{
+    height: 60vh;
+    text-align: center;
+}
+.textoFundador{
+    text-align: justify;
+}
+.fundador{
+    box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -webkit-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    -moz-box-shadow: 12px 12px 21px -3px rgba(118,114,114,1);
+    margin-top: 5vh;
+    margin-left: 5vh;
+    padding: 6vh;
+    width: 25%;
+    height: 40vh;
+    overflow: auto;  
+    display: inline-block;
+} 
+h3{
+    font-size: 5vh;
+    padding: 2vh;
+}
+#fundadorUm{
+    background-color: thistle;
+}
+
+#fundadorDois{
+    background-color: thistle;
+}
+
+#fundadorTres{
+    background-color: thistle;
+}
+
+#logo{
+    width: 40vh;
+    height: 20vh;
+}
+.meio {
+    display: flex;
+    margin-right: 5vh;
+
+}
+#copyright {
+    font-size: 3.5vh;
+    font-style: italic;
+    margin-top: 14vh;
+}
+.redesSociaisLogos {
+    margin-left: 1vh;
+    margin-right: 2vh;
+    width: 7vh;
+    height: 7.2vh;
+    max-height: 19vh;
+}
+.redesSociaisLogos:hover {
+    opacity: 0.6;
+}
+#logos {
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+}
+#whatsappLogo{
+    width: 8vh;
+    height: 8.5vh;
+}
+#twitterLogo{
+    width: 9vh;
+    height: 9.5vh;
+}
+
